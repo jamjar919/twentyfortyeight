@@ -573,14 +573,8 @@
 	}
 	
 	function IsGameOver() {
-		if (!CanMoveRight()) {
-			if (!CanMoveLeft()) {
-				if (!CanMoveUp()) {
-					if (!CanMoveDown()) {
-						return True;
-					}
-				}
-			}
+		if (((!CanMoveRight()) && (!CanMoveLeft())) && ((!CanMoveUp()) && (!CanMoveDown()))) {
+			return True;
 		}
 	}
 	
